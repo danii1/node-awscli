@@ -9,11 +9,13 @@ RUN apk add --no-cache \
   groff \
   python \
   nodejs \
+  nodejs-npm \
   yarn \
   openssh-client \
   py-pip && \
   pip install --upgrade awscli s3cmd && \
   mkdir /root/.aws
+
 
 VOLUME ["/app"]
 WORKDIR /app
