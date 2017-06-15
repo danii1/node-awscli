@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.6
 MAINTAINER Daniil Pokrovsky
 
 RUN apk add --no-cache \
@@ -9,13 +9,11 @@ RUN apk add --no-cache \
   groff \
   python \
   nodejs \
+  yarn \
   openssh-client \
   py-pip && \
   pip install --upgrade awscli s3cmd && \
   mkdir /root/.aws
-
-RUN npm set progress=false && \
-  npm install -g --progress=false yarn
 
 VOLUME ["/app"]
 WORKDIR /app
