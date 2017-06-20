@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:edge
 MAINTAINER Daniil Pokrovsky
 
 RUN apk add --no-cache \
